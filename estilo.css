@@ -12,14 +12,36 @@ body{
     flex-wrap: wrap;
     max-width: 100%;
     font-family: 'Inter', sans-serif;
+    
 }
 
+.costas, .biceps{
+    background-color: #EF0107;
+}
+
+.peito, .triceps{
+    background-color: #0000FF;
+}
+.quadriceps{
+    background-color: #32de84;
+}
+.posterior, .gluteo{
+    background-color: #568203;
+}
+
+.panturrilha{
+    background: radial-gradient(circle, rgba(50,222,132,1) 34%, rgba(86,130,3,1) 75%);
+}
+.abdomen{
+    background: #043927;
+
+}
 header{
     display: flex;
     flex-direction: column;
     justify-content: center;
     /* background-image: linear-gradient(red,violet); */
-    background: rgb(233,63,251);;
+    background: #1E90FF;
     padding-bottom: 0.5em;
     
 }
@@ -28,9 +50,9 @@ h1{
     grid-column: span 3;
     text-align: center;
     padding: 0.8em;
-    color: rgb(148,63,251);
+    color: #1F305E;
     
-    border-bottom: 0.1em solid rgb(148,63,251);
+    border-bottom: 0.1em solid black;
     text-shadow: 3px 0 1px white;
 }
 
@@ -52,7 +74,7 @@ nav a{
     font-weight: bold;
     margin: 0.5em;
     border-radius: 0.3em;
-    background: rgb(148,63,251);
+    background: #1F305E;
     text-shadow: 0 0 5px white;
     box-shadow: 0 0 10px white;
     
@@ -67,7 +89,7 @@ nav a::before{
     width: 0;
     left: 50%;
     bottom: 0;
-    background-color: #e445e0;
+    background-color: #1E90FF;
     position: absolute;
     display: block;
     transition: width 0.3s ease-in-out;
@@ -94,18 +116,29 @@ nav a:hover::before, nav a:hover::after{
 
 main{
     
-    background: rgb(233,63,251);
+    background: #1E90FF;
     color: white;
-    border-top: 0.2em solid rgb(148,63,251);
+    border-top: 0.2em solid #1F305E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+article{
+    flex: 1;
+    flex-grow: 1;
+    width: 100%;
 }
 
 .container{
     padding: 0.5em;
+    flex: 1;
 }
 
 h2{
     text-transform: uppercase;
-    color: rgb(148,63,251);
+    color: #1F305E;
     background-color: white;
     display: block;
     padding: 0.3em;
@@ -120,31 +153,36 @@ h2{
 }
 
 .dados{
-    color: rgb(148,63,251);
-    border: 3px solid rgb(148,63,251);
+    color: #1F305E;
+    border: 3px solid #1F305E;
     border-radius: 0.4em;
-    box-shadow: 0 0 5px rgb(148,63,251);
+    box-shadow: 0 0 5px #1F305E;
     text-align: center;
     padding: 0.5em;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    flex: 1;
     
 }
 
 .dados h3{
     margin-bottom: 1.5em;
     margin-top: 1.5em;
-    background: radial-gradient(circle, rgba(251,66,247,1) 0%, rgba(201,70,252,1) 54%, rgba(251,66,247,1) 63%, rgba(201,70,252,1) 77%, rgba(251,66,247,1) 88%);
+    background: #1F305E;
+    border-radius: 0.3em;
     padding: 0.5em;
-    color: purple;
+    color: white;
     text-decoration: underline;
     font-size: 1.2em;
+    cursor: pointer;
 }
 
 .dados img{
+    width: 100%;
+    height: auto;
     max-width: 100%;
     aspect-ratio: 1;
-    display: inline-block;
+    display: none;
     margin-bottom: 1.5em;
     outline: 3px solid black;
     border-radius: 0.2em;
@@ -153,13 +191,14 @@ h2{
 .dados a{
     text-decoration: none;
     color: white;
-    background-color: rgb(148,63,251);
+    background-color: #1F305E;
     padding: 0.5em;
     margin-top: 2em;
-    display: block;
+    display: none;
     text-transform: uppercase;
     font-size: 1.2em;
     font-weight: 700;
+    border-radius: 0.3em;
 }
 
 .dados a:hover{
@@ -171,12 +210,30 @@ h2{
     text-decoration: none;
     text-align: center;
     padding: 1.5em;
-    background-color: black;
+    border: 2px solid #1F305E;
     margin-right: 0.5em;
     margin-left: 0.5em;
     text-transform: uppercase;
     margin-bottom: 1.5em;
     border-radius: 1em;
-    background: radial-gradient(circle, rgba(255,255,255,1) 15%, rgba(251,66,247,1) 80%);
+    background-color: white;
+    color: #1E90FF;
+    width: 5em;
+   
     
 }
+
+.inicio:hover{
+    background-color: #1F305E;
+    color: #1E90FF;
+}
+
+
+div.dados img.display-on {
+    display: block;
+  }
+  
+  div.dados a.display-on {
+    display: block;
+  }
+  
